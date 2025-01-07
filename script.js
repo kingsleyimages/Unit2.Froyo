@@ -15,7 +15,14 @@ function getOrder() {
       flavors.push(orderArray[i]);
     }
   }
+  const returnOrder = countFrequency(flavors, orderArray);
 
+  for (key in returnOrder) {
+    console.log(`${key}: ${returnOrder[key]}`);
+  }
+}
+
+function countFrequency(flavors, orderArray) {
   // create object to store flavors and their quantity
   const fullOrder = {};
 
@@ -31,9 +38,8 @@ function getOrder() {
     //reset count for next flavor
     count = 0;
   }
-  for (key in fullOrder) {
-    console.log(`${key}: ${fullOrder[key]}`);
-  }
+  return fullOrder;
 }
+//
 
 getOrder();
