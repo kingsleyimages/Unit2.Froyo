@@ -17,9 +17,11 @@ function getOrder() {
   }
   const returnOrder = countFrequency(flavors, orderArray);
 
+  let message = 'Order Summary: \n';
   for (key in returnOrder) {
-    console.log(`${key}: ${returnOrder[key]}`);
+    message += `${key}: ${returnOrder[key]} \n`;
   }
+  alert(message);
 }
 
 function countFrequency(flavors, orderArray) {
