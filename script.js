@@ -31,7 +31,9 @@ function getOrder() {
     //reset count for next flavor
     count = 0;
   }
-  console.log(fullOrder);
+  for (key in fullOrder) {
+    console.log(`${key}: ${fullOrder[key]}`);
+  }
 }
 
 getOrder();
